@@ -24,7 +24,7 @@ class CartProvider extends ChangeNotifier {
     _loadCart(); // Load cart on app start
   }
 
-  /// Load cart from SharedPreferences
+  
   Future<void> _loadCart() async {
     final prefs = await SharedPreferences.getInstance();
     final String? cartData = prefs.getString('cart');
