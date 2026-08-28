@@ -1,0 +1,30 @@
+name: ecommerce_app
+description: A Flutter e-commerce app using Fake Store API
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # ✅ State Management
+  provider: ^6.0.5
+  
+  # ✅ API Calls
+  http: ^1.1.0
+  
+  # ✅ Local Storage
+  shared_preferences: ^2.2.2
+  
+  # ✅ Image Caching
+  cached_network_image: ^3.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+
+flutter:
+  uses-material-design: true
