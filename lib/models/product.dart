@@ -1,4 +1,3 @@
-/// Product Model - Matches Fake Store API response
 class Product {
   final int id;
   final String title;
@@ -18,7 +17,6 @@ class Product {
     required this.rating,
   });
 
-  /// Convert JSON to Product object
   factory Product.fromJson(Map<String, dynamic> json) {
     return Product(
       id: json['id'],
