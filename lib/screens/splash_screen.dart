@@ -92,9 +92,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     color: Colors.blue,
                   ),
                 ),
-                
+
                 const SizedBox(height: 30),
-                
+
                 // App Name
                 const Text(
                   'ShopEase',
@@ -105,9 +105,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     letterSpacing: 2,
                   ),
                 ),
-                
+
                 const SizedBox(height: 8),
-                
+
                 // App Tagline
                 Text(
                   'Your Favorite Shopping Store',
@@ -118,17 +118,17 @@ class _SplashScreenState extends State<SplashScreen> {
                     letterSpacing: 1,
                   ),
                 ),
-                
+
                 const SizedBox(height: 50),
-                
+
                 // Loading Indicator
                 const CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
                   strokeWidth: 3,
                 ),
-                
+
                 const SizedBox(height: 20),
-                
+
                 // Version Info
                 Text(
                   'Version 1.0.0',
