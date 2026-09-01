@@ -20,7 +20,7 @@ class ProductProvider extends ChangeNotifier {
   String? get error => _error;
   String get selectedCategory => _selectedCategory;
 
-  /// Load all products from API
+
   Future<void> loadProducts() async {
     _isLoading = true;
     _error = null;
@@ -56,7 +56,7 @@ class ProductProvider extends ChangeNotifier {
     await loadCategories();
   }
 
-  /// Filter products by category
+  
   void filterByCategory(String category) {
     _selectedCategory = category;
     
