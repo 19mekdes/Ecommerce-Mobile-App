@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/settings_tile.dart'; // ✅ Import your reusable SettingsTile
+import '../widgets/settings_tile.dart'; 
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -15,12 +15,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade50, // Matches Profile screen background
+      backgroundColor: Colors.grey.shade50, 
       appBar: AppBar(
         title: const Text('Settings'),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
-        elevation: 0, // ✅ Removes the shadow to blend with the light background
+        elevation: 0, 
       ),
       body: ListView(
         padding: const EdgeInsets.only(top: 20, bottom: 30, left: 0, right: 0),
@@ -155,7 +155,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  // ✅ Helper widget to create section headers
+  
   Widget _buildSectionHeader(String title) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
