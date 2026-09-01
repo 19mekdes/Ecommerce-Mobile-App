@@ -19,7 +19,7 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // ✅ 1. PROFILE HEADER
+            
             const ProfileHeader(
               name: 'John Doe',
               email: 'john.doe@example.com',
@@ -30,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // ✅ 2. PROFILE TILES (With Subtitles!)
+            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                         const SnackBar(content: Text('Logged out successfully!')),
                       );
                     },
-                    showDivider: false, // Hides divider for the last item
+                    showDivider: false, 
                   ),
                 ],
               ),
