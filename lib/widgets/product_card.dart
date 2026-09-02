@@ -16,9 +16,8 @@ class ProductCard extends StatelessWidget {
 
   // Placeholder function for Wishlist logic
   void _toggleWishlist(BuildContext context) {
-
     // Example: context.read<WishlistProvider>().toggleWishlist(product);
-    
+
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('${product.title} added to wishlist!'),
@@ -73,7 +72,7 @@ class ProductCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  
+
                   // 2. The Heart (Wishlist) Button Overlay
                   Positioned(
                     top: 8,
@@ -96,7 +95,8 @@ class ProductCard extends StatelessWidget {
                           ],
                         ),
                         child: const Icon(
-                          Icons.favorite_border, // Change to Icons.favorite for solid heart
+                          Icons
+                              .favorite_border, // Change to Icons.favorite for solid heart
                           color: Colors.redAccent,
                           size: 20,
                         ),
@@ -124,7 +124,7 @@ class ProductCard extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  
+
                   const SizedBox(height: 4),
 
                   // Price & Rating & Button Area
@@ -183,8 +183,8 @@ class ProductCard extends StatelessWidget {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         SnackBar(
-                                          content: Text(
-                                              '${product.title} added!'),
+                                          content:
+                                              Text('${product.title} added!'),
                                           backgroundColor: Colors.green,
                                         ),
                                       );
@@ -194,8 +194,7 @@ class ProductCard extends StatelessWidget {
                                       foregroundColor: Colors.white,
                                       padding: EdgeInsets.zero,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(6),
+                                        borderRadius: BorderRadius.circular(6),
                                       ),
                                     ),
                                     child: const Text('Add to Cart',

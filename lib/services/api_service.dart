@@ -15,12 +15,12 @@ class ApiException implements Exception {
 
 class ApiService {
   // Base URL for Fake Store API
-  static const String baseUrl = 'https://corsproxy.io/?https://fakestoreapi.com';
+  static const String baseUrl =
+      'https://corsproxy.io/?https://fakestoreapi.com';
 
   // Give the request time to complete before failing with a clear message
   static const Duration _timeout = Duration(seconds: 12);
 
-  
   /// (DNS errors, offline, server unreachable) into a friendly [ApiException].
   Future<http.Response> _send(Future<http.Response> Function() request) async {
     try {
