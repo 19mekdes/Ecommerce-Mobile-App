@@ -36,7 +36,6 @@ class ProfileHeader extends StatelessWidget {
                 backgroundColor: Colors.white,
                 backgroundImage: AssetImage(imagePath),
               ),
-
               if (onEditPhoto != null)
                 CircleAvatar(
                   radius: 18,
@@ -53,9 +52,7 @@ class ProfileHeader extends StatelessWidget {
                 ),
             ],
           ),
-
           const SizedBox(height: 15),
-
           Text(
             name,
             style: const TextStyle(
@@ -64,9 +61,7 @@ class ProfileHeader extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-
           const SizedBox(height: 5),
-
           Text(
             email,
             style: const TextStyle(
