@@ -5,8 +5,8 @@ import '../providers/cart_provider.dart';
 import 'product_detail_screen.dart';
 import 'cart_screen.dart';
 import '../widgets/product_card.dart';
-import 'profile_screen.dart';    // ✅ Added this
-import 'settings_screen.dart';   // ✅ Added this
+import 'profile_screen.dart';    
+import 'settings_screen.dart';   
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,10 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   // The 4 pages for the bottom navbar
   final List<Widget> _pages = [
-    const HomeTabContent(),      // Home (Grid + Categories)
-    const ProductsTabContent(),  // Products (Grid ONLY)
-    const ProfileScreen(),       // ✅ REAL PROFILE PAGE
-    const SettingsScreen(),      // ✅ REAL SETTINGS PAGE
+    const HomeTabContent(),      
+    const ProductsTabContent(),  
+    const ProfileScreen(),       
+    const SettingsScreen(),      
   ];
 
   @override
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final productProvider = Provider.of<ProductProvider>(context);
 
     return Scaffold(
-      // ✅ HEADER: App Bar with Search and Cart
+      //  App Bar with Search and Cart
       appBar: AppBar(
         title: const Text('🛍️ ShopEase'),
         backgroundColor: Colors.blue,
@@ -100,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
         // Search Bar inside the Header
         bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(60), // Reduced height since categories moved
+          preferredSize: const Size.fromHeight(60), 
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: TextField(
@@ -123,10 +123,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
 
-      // ✅ BODY: Switches based on the bottom navbar selection
+      //  Switches based on the bottom navbar selection
       body: _pages[_selectedIndex],
 
-      // ✅ FOOTER: Bottom Navigation Bar (Home, Products, Profile, Settings)
+      //  Bottom Navigation Bar (Home, Products, Profile, Settings)
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed, // Keeps labels from shifting
         currentIndex: _selectedIndex,
@@ -264,9 +264,6 @@ class _HomeTabContentState extends State<HomeTabContent> {
   }
 }
 
-// ======================================================
-// 2. PRODUCTS TAB CONTENT (GRID ONLY, NO CATEGORIES)
-// ======================================================
 class ProductsTabContent extends StatelessWidget {
   const ProductsTabContent({super.key});
 

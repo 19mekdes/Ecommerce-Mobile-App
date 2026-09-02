@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class ProfileAvatar extends StatelessWidget {
   final String imagePath;
   final VoidCallback? onEditPressed;
