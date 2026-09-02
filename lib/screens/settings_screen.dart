@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/settings_tile.dart'; 
+import '../widgets/settings_tile.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -15,19 +15,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade50, 
+      backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
         title: const Text('Settings'),
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
-        elevation: 0, 
+        elevation: 0,
       ),
       body: ListView(
         padding: const EdgeInsets.only(top: 20, bottom: 30, left: 0, right: 0),
         children: [
           // ================= ACCOUNT SECTION =================
           _buildSectionHeader('Account'),
-          
+
           SettingsTile(
             icon: Icons.person_outline,
             title: 'Edit Profile',
@@ -36,7 +36,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               // Navigate to EditProfileScreen
             },
           ),
-          
+
           SettingsTile(
             icon: Icons.lock_outline,
             title: 'Change Password',
@@ -155,7 +155,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  
   Widget _buildSectionHeader(String title) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),

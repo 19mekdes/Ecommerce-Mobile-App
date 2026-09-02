@@ -19,18 +19,14 @@ class ProfileScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            
             const ProfileHeader(
               name: 'John Doe',
               email: 'john.doe@example.com',
-              imagePath: 'assets/images/profile_placeholder.png', 
+              imagePath: 'assets/images/profile_placeholder.png',
               // Note: If using a real image URL, change AssetImage to NetworkImage in the header file
-              onEditPhoto: null, 
+              onEditPhoto: null,
             ),
-
             const SizedBox(height: 20),
-
-            
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
@@ -67,10 +63,11 @@ class ProfileScreen extends StatelessWidget {
                     onTap: () {
                       // Add your logout logic here
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Logged out successfully!')),
+                        const SnackBar(
+                            content: Text('Logged out successfully!')),
                       );
                     },
-                    showDivider: false, 
+                    showDivider: false,
                   ),
                 ],
               ),

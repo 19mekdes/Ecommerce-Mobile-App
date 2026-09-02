@@ -22,9 +22,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.product.title.length > 20 
-            ? '${widget.product.title.substring(0, 20)}...' 
-            : widget.product.title,
+          widget.product.title.length > 20
+              ? '${widget.product.title.substring(0, 20)}...'
+              : widget.product.title,
         ),
       ),
       body: SingleChildScrollView(
@@ -53,16 +53,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             const SizedBox(height: 16),
-            
+
             // 📝 Product Title
             Text(
               widget.product.title,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 8),
-            
+
             // 💰 Price & ⭐ Rating
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -87,7 +87,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ],
             ),
             const SizedBox(height: 16),
-            
+
             // 🏷️ Category
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -105,7 +105,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
             const SizedBox(height: 16),
-            
+
             // 📄 Description
             const Text(
               'Description',
@@ -120,7 +120,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               style: const TextStyle(fontSize: 14, height: 1.5),
             ),
             const SizedBox(height: 24),
-            
+
             // 🛒 Add to Cart Button
             SizedBox(
               width: double.infinity,
@@ -147,11 +147,12 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     setState(() {});
                   }
                 },
-                icon: Icon(isInCart ? Icons.shopping_cart : Icons.add_shopping_cart),
+                icon: Icon(
+                    isInCart ? Icons.shopping_cart : Icons.add_shopping_cart),
                 label: Text(
-                  isInCart 
-                    ? 'Go to Cart (${cartProvider.totalItems})' 
-                    : 'Add to Cart',
+                  isInCart
+                      ? 'Go to Cart (${cartProvider.totalItems})'
+                      : 'Add to Cart',
                   style: const TextStyle(fontSize: 16),
                 ),
                 style: ElevatedButton.styleFrom(
@@ -163,7 +164,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                 ),
               ),
             ),
-            
+
             // ➕ Quantity Controls (if in cart)
             if (isInCart) ...[
               const SizedBox(height: 8),
@@ -174,7 +175,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     icon: const Icon(Icons.remove_circle_outline),
                     onPressed: () {
                       if (quantity > 1) {
-                        cartProvider.updateQuantity(widget.product, quantity - 1);
+                        cartProvider.updateQuantity(
+                            widget.product, quantity - 1);
                       } else {
                         cartProvider.removeFromCart(widget.product);
                       }
