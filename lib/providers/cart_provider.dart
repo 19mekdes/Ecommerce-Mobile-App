@@ -101,7 +101,7 @@ class CartProvider extends ChangeNotifier {
 
   /// Get quantity of product in cart
   int getQuantity(Product product) {
-    // ✅ FIXED: Properly checks if item exists before creating a dummy
+    //  Properly checks if item exists before creating a dummy
     final index = _items.indexWhere((item) => item.product.id == product.id);
     if (index != -1) {
       return _items[index].quantity;
